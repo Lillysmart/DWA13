@@ -79,9 +79,21 @@ const hasSArray = names.map(name => {
     { product: 'tea', price: '' },
   ]
 
+
+  
   //one console
-  console.log(
 products.forEach(product => {
     console.log(product.product)
 })
-  )
+
+
+//second console
+const productsFilter = products.filter((product)=>{
+    return product.product.length <= 5;
+  })
+
+  console.log(productsFilter)
+
+ products.map(product => {
+    
+  });
