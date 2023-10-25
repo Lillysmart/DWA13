@@ -36,7 +36,7 @@ names.map(name => {
     
  });
 
-
+//Province in alphabetical Order
  const provincesSort =provinces.toSorted ()
  console.log(provincesSort)
  
