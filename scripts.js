@@ -94,6 +94,15 @@ const productsFilter = products.filter((product)=>{
 
   console.log(productsFilter)
 
- products.map(product => {
-    
-  });
+
+  
+  const filteredProducts = products
+  .map((product) => {
+    const price = parseFloat(product.price);
+    return isNaN(price) ? null : { ...product, price };
+  })
+  .filter((product) => product !== null);
+
+console.log(filteredProducts);
+
+ 
