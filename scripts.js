@@ -26,3 +26,13 @@ names.forEach((name, index) => {
    ) 
    
 });
+
+
+//Amount of characters in each name
+names.map(name => {
+    
+    console.log(name.length
+    ) 
+    
+ });
+
