@@ -36,3 +36,8 @@ names.map(name => {
     
  });
 
+
+ const provincesSort =provinces.toSorted ()
+ console.log(provincesSort)
+ 
+
