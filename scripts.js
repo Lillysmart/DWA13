@@ -11,15 +11,18 @@ provinces.forEach((provinceName)=>{
 console.log(provinceName)
 })
 
-//concat them together 
-const nameAndProvince = `${names.join(' ')} 
 
-${provinces.join(' ')}`
-
-console.log(nameAndProvince)
-
-
+//log both the province and name with their indeces.
 names.forEach((name, index) => {
     const province = provinces[index] || ''; // Use an empty string if the array is shorter
     console.log(` ${name}( ${province})`);
+});
+
+
+//Province to uppercase
+ provinces.map(province => {
+    
+   console.log(province.toUpperCase()
+   ) 
+   
 });
