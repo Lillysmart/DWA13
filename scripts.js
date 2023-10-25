@@ -45,10 +45,32 @@ names.map((name) => {
 const provincesSort = provinces.toSorted();
 console.log(provincesSort);
 
-
-//Provinces with Cape
-const provincesRemaining = provinces.filter((province) =>
-  province.includes("Cape")
+//Provinces without Cape
+const provincesRemaining = provinces.filter(
+  (province) => !province.includes("Cape")
 );
 
 console.log(provincesRemaining);
+
+
+//array bof names that has 's'
+const hasSArray = names.map(name => {
+    const namesUppercase = name.toUpperCase();
+    return namesUppercase.includes('S');
+  });
+  
+  console.log(hasSArray);
+
+
+//combine name and province
+  const combinedArray = provinces.reduce((result, province, index) => {
+    result.push(`${province}: ${names[index]}`);
+    return result;
+  }, []);
+  
+  console.log(combinedArray)
+
+  //one console
+  console.log(
+    
+  )
