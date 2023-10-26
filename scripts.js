@@ -88,8 +88,10 @@ const productsFilter = products.filter((product) => {
   return product.product.length <= 5;
 });
 
-console.log(productsFilter);
+console.log(productsFilter)
 
+
+// convert prices to a number
 const filteredAndMappedProducts = products.filter((product) => 
 typeof product.price === 'number' || !isNaN(parseFloat(product.price)))
   .map((product) => ({
@@ -100,4 +102,24 @@ const combinedPrice = filteredAndMappedProducts.reduce((total, product) => total
 
 console.log(combinedPrice);
 
-//filteredProducts.reduce()
+
+//combine all the products name
+const reducedProducts = products.reduce((result, product, index) => {
+  const separator = index === 0 ? '' : ', '; // Add a comma and space except for the first item
+  return `${result}${separator}${product.product}`;
+}, '');
+
+console.log(reducedProducts);
+
+const HighestAndLowest = products.reduce((result, product, index) => {
+
+  const Highest =Math.max(product.price)
+  console.log(Highest)
+  const lowest = Math.min(product.price)
+  console.log(lowest)
+
+  const together =`highest${result}${Highest}. Lowest${result}${lowest}`
+}, ':');
+
+console.log(HighestAndLowest)
+
